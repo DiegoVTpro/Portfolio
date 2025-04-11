@@ -1,0 +1,90 @@
+/* Mode sombre par défaut */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Mode clair */
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Animations */
+  .project-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    width: 60%; /* Ajuste cette largeur selon tes besoins */
+    margin: 10px 0;
+}
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #ffffff;
+  }
+
+  .timeline-item:nth-child(odd) {
+    align-self: flex-start; /* Les éléments impairs (1er, 3e, etc.) à gauche */
+}
+
+.timeline-item:nth-child(even) {
+    align-self: flex-end; /* Les éléments pairs (2e, 4e, etc.) à droite */
+}
+
+.timeline-content {
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background-color: #ddd;
+}
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .timeline-item::before {
+      left: 20px;
+    }
+  }
+
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  
